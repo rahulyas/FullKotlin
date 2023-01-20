@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bottomSheet"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/firstButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/btn_one" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/secondButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/btn_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/threeButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/btn_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fourButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/btn_four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</LinearLayout>

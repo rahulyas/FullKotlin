@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBottomSheetPersistent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CustomBottomSheet" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BottomNavigationView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBottomNavigation1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BottomNavigationViewPager" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNavigationDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NavigationDrawer"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNavigationDrawerusingfragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NavigationDrawerUsingFragment"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRetrofit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retrofit"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btncheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnspinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spinner"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnrecycleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecycleView"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnalertdialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnretrofit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retrofit"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnsqlitedatabase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SQLITE DATABASE"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnmotionlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Motion Layout"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnbluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bluetooth"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnnestedscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NestedScrollView"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnarraylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ArrayList"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btntoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ToolBar"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnroomdatabase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RoomDatabase"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnroomdatabase1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RoomDatabase1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnanimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Animation"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btntablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TabLayout"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/expandablelistviewnavigationdrawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expandable Listview Navigationdrawer"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PopUp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/FloatingActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ExtendedFloatingActionButtonActivity"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/navigationComponent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Navigation Component"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/customnavigationDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Custom Navigation Drawer"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/carousel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="carousel Viewpapger"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnwebview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Web View"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnreadwrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Read And Write"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btndrawbitmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bitmap"/>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
