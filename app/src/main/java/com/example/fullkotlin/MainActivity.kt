@@ -1,14 +1,18 @@
 package com.example.fullkotlin
 
 import android.content.Intent
+import android.content.SharedPreferences
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.AppCompatButton
 import androidx.constraintlayout.helper.widget.Carousel
 import androidx.navigation.Navigation
+import com.example.fullkotlin.AndroidRecyclerViewLayoutAnimation.RecycleViewMainActivity
 import com.example.fullkotlin.ArrayList.ArrayListActivity
 import com.example.fullkotlin.Bluetooth.BluetoothActivity
 import com.example.fullkotlin.Carousel.CarouselActivity
@@ -16,7 +20,10 @@ import com.example.fullkotlin.CustomNavigationDrawer.CustomNavigationDrawerActiv
 import com.example.fullkotlin.MotionLayout.MotionLayoutActivity
 import com.example.fullkotlin.NestedScrollView.NestedScrollViewActivity
 import com.example.fullkotlin.RecycleView.RecycleViewActivity
+import com.example.fullkotlin.RecyclerViewSwipetodelete.RecyclerViewSwipetodeleteActivity
+import com.example.fullkotlin.RecyclerViewdraganddrop.RecyclerViewdraganddropActivity
 import com.example.fullkotlin.Retrofit.RetrofitActivity
+import com.example.fullkotlin.RetrofitCallEveryXSecond.RetrofitCallEveryXSecondActivity
 import com.example.fullkotlin.RoomDatabase.RoomDatabaseActivity
 import com.example.fullkotlin.RoomDatabase1.RoomDatabase1Activity
 import com.example.fullkotlin.SqliteDatabase.SqliteDatabaseActivity
@@ -29,6 +36,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+//    var currentNightMode = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,28 +45,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val button = findViewById<Button>(R.id.btnBottomSheetPersistent)
-        val bottomnavigation = findViewById<AppCompatButton>(R.id.btnBottomNavigation)
-        val bottomnavigationviewpager = findViewById<AppCompatButton>(R.id.btnBottomNavigation1)
-        val navigationdrawer = findViewById<AppCompatButton>(R.id.btnNavigationDrawer)
-        val retrofit = findViewById<AppCompatButton>(R.id.btnRetrofit)
-        val checkBox = findViewById<AppCompatButton>(R.id.btncheckbox)
-        val spinner = findViewById<AppCompatButton>(R.id.btnspinner)
-        val recyclerView = findViewById<AppCompatButton>(R.id.btnrecycleview)
-        val alertDialog = findViewById<AppCompatButton>(R.id.btnalertdialog)
-        val retorfit1 = findViewById<AppCompatButton>(R.id.btnretrofit)
-        val sqlitedatabase = findViewById<AppCompatButton>(R.id.btnsqlitedatabase)
-        val motionlayout = findViewById<AppCompatButton>(R.id.btnmotionlayout)
-        val bluetooth = findViewById<AppCompatButton>(R.id.btnbluetooth)
-        val nestedscrollview = findViewById<AppCompatButton>(R.id.btnnestedscrollview)
-        val arraylist = findViewById<AppCompatButton>(R.id.btnarraylist)
-        val toolbar = findViewById<AppCompatButton>(R.id.btntoolbar)
-        val roomdatabase = findViewById<AppCompatButton>(R.id.btnroomdatabase)
-        val roomdatabase1 = findViewById<AppCompatButton>(R.id.btnroomdatabase1)
-        val animation = findViewById<AppCompatButton>(R.id.btnanimation)
-        val tablayout = findViewById<AppCompatButton>(R.id.btntablayout)
-        val expandablelistviewnavigationdrawer = findViewById<AppCompatButton>(R.id.expandablelistviewnavigationdrawer)
-        val popup = findViewById<AppCompatButton>(R.id.popup)
-
 
         binding.btnBottomSheetPersistent.setOnClickListener {
             CustomBottomSheetDialogFragment().apply {
@@ -214,6 +200,52 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val appSettingPrefs : SharedPreferences = getSharedPreferences("AppSettingsPref",0)
+        val sharedPreferences : SharedPreferences.Editor = appSettingPrefs.edit()
+        val currentNightMode : Boolean = appSettingPrefs.getBoolean("NightMode", false)
+
+        binding.btnthemechange.setOnClickListener {
+            if (currentNightMode) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                sharedPreferences.putBoolean("NightMode",false)
+                sharedPreferences.apply()
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                sharedPreferences.putBoolean("NightMode",true)
+                sharedPreferences.apply()
+            }
+        }
+
+        binding.btnosm.setOnClickListener {
+            val intent = Intent(this,OSMActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnsharedpreference.setOnClickListener {
+            val intent = Intent(this,SharedPreferenceActivity ::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnrecycleviewAnimation.setOnClickListener {
+            val intent = Intent(this,RecycleViewMainActivity ::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnrecycleviewdrag.setOnClickListener {
+            val intent = Intent(this,RecyclerViewdraganddropActivity ::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnrecycleviewswipetodelete.setOnClickListener {
+            val intent = Intent(this,RecyclerViewSwipetodeleteActivity ::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnretrofitcalleveryX.setOnClickListener {
+            val intent = Intent(this,RetrofitCallEveryXSecondActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onBackPressed() {
@@ -236,4 +268,8 @@ class MainActivity : AppCompatActivity() {
         }.create().show()
     }
 
+//    override fun onConfigurationChanged(newConfig: Configuration) {
+//        super.onConfigurationChanged(newConfig)
+//        currentNightMode = newConfig.uiMode and Configuration.UI_MODE_NIGHT_MASK
+//    }
 }

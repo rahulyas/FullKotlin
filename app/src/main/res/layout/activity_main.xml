@@ -195,6 +195,48 @@
         android:layout_height="wrap_content"
         android:text="Bitmap"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnthemechange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dark Mode"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnosm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OSM Map"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnsharedpreference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shared Preference"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnrecycleviewAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecycleViewAnimation"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnrecycleviewdrag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecycleView Drag/Drop"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnrecycleviewswipetodelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecycleViewSwipeToDelete"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnretrofitcalleveryX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retrofit CalleveryX"/>
+
 
     </LinearLayout>
 

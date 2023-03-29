@@ -1,15 +1,17 @@
 package com.example.fullkotlin.RecycleView
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fullkotlin.R
+
 
 class ModelAdapter (private val modlelist:ArrayList<Model> ,private val context: Context)
     : RecyclerView.Adapter<ModelAdapter.ModelViewHolder>() {
@@ -22,8 +24,13 @@ class ModelAdapter (private val modlelist:ArrayList<Model> ,private val context:
     }
 
     override fun onBindViewHolder(holder: ModelViewHolder, position: Int) {
+        val backgroundColor = ContextCompat.getColor(
+            holder.itemView.context,
+            if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) R.color.cold else R.color.coral
+        )
         val modle = modlelist[position]
         holder.imageview.setImageResource(modle.image)
+        holder.imageview.setBackgroundColor(backgroundColor)
         holder.textview.text = modle.name
         //click Listener to next activity
         holder.itemView.setOnClickListener {
